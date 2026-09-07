@@ -1,0 +1,2526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pro Computer Center | Technology Made Simple</title>
+
+    <meta name="description"
+          content="Pro Computer Center - Trusted technology solutions since 1994. Computers, laptops, repair, LED displays, smart classrooms, networking, CCTV and accounting software support in Sekinchan, Selangor.">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: #171D23;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        :root {
+            --orange: #E97855;
+            --turquoise: #43C4C4;
+            --dark: #171D23;
+            --dark-2: #1D252D;
+            --dark-3: #222C35;
+            --white: #ffffff;
+            --gray: #AAB4BD;
+        }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 110px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 55px;
+        }
+
+        .section-label {
+            color: var(--turquoise);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            color: var(--gray);
+            font-size: 17px;
+            max-width: 650px;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+
+            z-index: 1000;
+
+            background: rgba(23, 29, 35, 0.65);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            height: 68px;
+            background: rgba(23, 29, 35, 0.95);
+        }
+
+        .nav-container {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .logo-pro {
+            color: var(--orange);
+            font-size: 24px;
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -1px;
+        }
+
+        .logo-computer {
+            color: var(--turquoise);
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+
+        /* NAV LINKS */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.75);
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-whatsapp {
+            background: var(--orange);
+            color: white !important;
+
+            padding: 10px 17px;
+            border-radius: 8px;
+
+            transition: all 0.25s ease !important;
+        }
+
+        .nav-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(233,120,85,0.25);
+        }
+
+
+        /* MOBILE MENU */
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 800px;
+
+            position: relative;
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(67,196,196,0.10),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(233,120,85,0.08),
+                    transparent 35%
+                ),
+                var(--dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent
+            );
+
+            pointer-events: none;
+        }
+
+        .hero-container {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+
+            align-items: center;
+
+            gap: 50px;
+
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* HERO TEXT */
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--turquoise);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 22px;
+        }
+
+        .hero-eyebrow span {
+            width: 35px;
+            height: 2px;
+            background: var(--orange);
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 7vw, 90px);
+
+            line-height: 0.98;
+
+            letter-spacing: -5px;
+
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: var(--orange);
+        }
+
+        .hero p {
+            color: var(--gray);
+
+            font-size: 18px;
+
+            max-width: 580px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* HERO BUTTONS */
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 14px 24px;
+
+            border-radius: 9px;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: white;
+
+            box-shadow:
+                0 15px 35px rgba(233,120,85,0.18);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 20px 45px rgba(233,120,85,0.30);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.16);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--turquoise);
+            color: var(--turquoise);
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           HERO TECHNOLOGY VISUAL
+        ========================= */
+
+        .hero-visual {
+            position: relative;
+
+            height: 570px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tech-glow {
+            position: absolute;
+
+            width: 480px;
+            height: 480px;
+
+            right: 0;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(67,196,196,0.22) 0%,
+                    rgba(233,120,85,0.13) 35%,
+                    transparent 70%
+                );
+
+            filter: blur(25px);
+
+            animation: pulseGlow 5s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                opacity: 0.65;
+                transform: translateY(-50%) scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-50%) scale(1.08);
+            }
+        }
+
+
+        /* IMAGE */
+
+        .tech-image-wrapper {
+            width: 100%;
+            max-width: 620px;
+
+            position: relative;
+            z-index: 2;
+
+            border-radius: 28px;
+
+            overflow: hidden;
+
+            transform:
+                perspective(1000px)
+                rotateY(-5deg);
+
+            border:
+                1px solid rgba(255,255,255,0.10);
+
+            box-shadow:
+                0 35px 90px rgba(0,0,0,0.50),
+                0 0 70px rgba(67,196,196,0.10);
+
+            transition:
+                transform 0.6s ease,
+                box-shadow 0.6s ease;
+        }
+
+        .tech-image-wrapper:hover {
+            transform:
+                perspective(1000px)
+                rotateY(0deg)
+                translateY(-5px);
+
+            box-shadow:
+                0 40px 100px rgba(0,0,0,0.55),
+                0 0 80px rgba(67,196,196,0.15);
+        }
+
+        .tech-image {
+            width: 100%;
+            height: 470px;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform 0.8s ease;
+        }
+
+        .tech-image-wrapper:hover .tech-image {
+            transform: scale(1.04);
+        }
+
+
+        /* FLOATING TECHNOLOGY CARDS */
+
+        .tech-card {
+            position: absolute;
+
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 14px 18px;
+
+            background:
+                rgba(23,29,35,0.88);
+
+            backdrop-filter: blur(15px);
+
+            border:
+                1px solid rgba(255,255,255,0.10);
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.40);
+
+            z-index: 5;
+
+            animation:
+                floatingTech 4s ease-in-out infinite;
+        }
+
+        .tech-card strong {
+            display: block;
+
+            color: white;
+
+            font-size: 14px;
+        }
+
+        .tech-card small {
+            display: block;
+
+            color: rgba(255,255,255,0.55);
+
+            font-size: 11px;
+
+            margin-top: 3px;
+        }
+
+        .tech-icon {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(67,196,196,0.12);
+
+            color: var(--turquoise);
+
+            font-size: 20px;
+        }
+
+        .tech-card-ai {
+            top: 65px;
+            right: -5px;
+        }
+
+        .tech-card-network {
+            bottom: 75px;
+            left: -20px;
+
+            animation-delay: 1.5s;
+        }
+
+        @keyframes floatingTech {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: var(--dark-2);
+
+            border-top:
+                1px solid rgba(255,255,255,0.05);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.05);
+
+            padding: 35px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 30px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 35px;
+            font-weight: 900;
+
+            color: white;
+        }
+
+        .stat-number span {
+            color: var(--orange);
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: var(--dark);
+        }
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.85fr 1.15fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .about-number {
+            font-size: 170px;
+
+            line-height: 0.8;
+
+            font-weight: 900;
+
+            color: rgba(233,120,85,0.08);
+
+            letter-spacing: -12px;
+        }
+
+        .about-content h3 {
+            font-size: 34px;
+
+            line-height: 1.15;
+
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            color: var(--gray);
+
+            font-size: 16px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: var(--dark-2);
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .service-card {
+            padding: 32px 26px;
+
+            background:
+                rgba(255,255,255,0.025);
+
+            border:
+                1px solid rgba(255,255,255,0.07);
+
+            border-radius: 18px;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(67,196,196,0.35);
+
+            background:
+                rgba(67,196,196,0.035);
+        }
+
+        .service-icon {
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+                rgba(233,120,85,0.10);
+
+            color: var(--orange);
+
+            font-size: 25px;
+
+            margin-bottom: 24px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CUSTOMERS
+        ========================= */
+
+        .customers {
+            background: var(--dark);
+        }
+
+        .customers-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+        }
+
+        .customer-card {
+            padding: 35px 20px;
+
+            text-align: center;
+
+            border:
+                1px solid rgba(255,255,255,0.07);
+
+            border-radius: 15px;
+
+            background:
+                rgba(255,255,255,0.025);
+
+            transition: all 0.3s ease;
+        }
+
+        .customer-card:hover {
+            transform: translateY(-6px);
+
+            border-color:
+                rgba(233,120,85,0.35);
+        }
+
+        .customer-icon {
+            font-size: 30px;
+
+            margin-bottom: 14px;
+        }
+
+        .customer-card h3 {
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why-us {
+            background: var(--dark-2);
+        }
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .why-card {
+            padding: 38px;
+
+            background:
+                rgba(255,255,255,0.025);
+
+            border:
+                1px solid rgba(255,255,255,0.07);
+
+            border-radius: 18px;
+        }
+
+        .why-card-number {
+            font-size: 13px;
+
+            color: var(--orange);
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 22px;
+        }
+
+        .why-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 100px 0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    var(--orange),
+                    #d96443
+                );
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .cta::after {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            right: -150px;
+            top: -250px;
+        }
+
+        .cta-content {
+            position: relative;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+        .cta h2 {
+            font-size:
+                clamp(32px, 5vw, 55px);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+        }
+
+        .cta p {
+            margin-top: 15px;
+
+            color: rgba(255,255,255,0.82);
+
+            max-width: 600px;
+        }
+
+        .cta .btn {
+            background: white;
+
+            color: var(--dark);
+
+            flex-shrink: 0;
+        }
+
+        .cta .btn:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.18);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: var(--dark);
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 50px;
+        }
+
+        .contact-details {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            gap: 16px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(67,196,196,0.10);
+
+            color: var(--turquoise);
+        }
+
+        .contact-item h4 {
+            font-size: 13px;
+
+            color: white;
+
+            margin-bottom: 3px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+        .contact-item a:hover {
+            color: var(--turquoise);
+        }
+
+        .map {
+            min-height: 400px;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+
+            min-height: 400px;
+
+            border: 0;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 0;
+
+            background: #11161B;
+
+            border-top:
+                1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-content {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .footer-copy {
+            color: rgba(255,255,255,0.45);
+
+            font-size: 12px;
+        }
+
+        .footer-brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+
+        /* =========================
+           FLOATING WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #25D366;
+
+            color: white;
+
+            font-size: 26px;
+
+            z-index: 999;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.30);
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           SCROLL ANIMATIONS
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform:
+                translateY(60px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal-left {
+            opacity: 0;
+
+            transform:
+                translateX(-70px);
+
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s ease;
+        }
+
+        .reveal-right {
+            opacity: 0;
+
+            transform:
+                translateX(70px);
+
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s ease;
+        }
+
+        .reveal.active,
+        .reveal-left.active,
+        .reveal-right.active {
+            opacity: 1;
+
+            transform:
+                translate(0, 0);
+        }
+
+
+        /* STAGGER */
+
+        .service-card:nth-child(1) {
+            transition-delay: 0.05s;
+        }
+
+        .service-card:nth-child(2) {
+            transition-delay: 0.10s;
+        }
+
+        .service-card:nth-child(3) {
+            transition-delay: 0.15s;
+        }
+
+        .service-card:nth-child(4) {
+            transition-delay: 0.20s;
+        }
+
+        .service-card:nth-child(5) {
+            transition-delay: 0.25s;
+        }
+
+        .service-card:nth-child(6) {
+            transition-delay: 0.30s;
+        }
+
+        .service-card:nth-child(7) {
+            transition-delay: 0.35s;
+        }
+
+        .service-card:nth-child(8) {
+            transition-delay: 0.40s;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding:
+                    130px 0 80px;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-eyebrow {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                height: 500px;
+            }
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .customers-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-number {
+                font-size: 100px;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                position: absolute;
+
+                top: 68px;
+                left: 0;
+
+                width: 100%;
+
+                padding: 25px;
+
+                background:
+                    rgba(23,29,35,0.98);
+
+                backdrop-filter: blur(15px);
+
+                flex-direction: column;
+
+                gap: 22px;
+
+                transform:
+                    translateY(-150%);
+
+                opacity: 0;
+
+                pointer-events: none;
+
+                transition: all 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform:
+                    translateY(0);
+
+                opacity: 1;
+
+                pointer-events: auto;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .stats-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-content {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding:
+                    125px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+
+                letter-spacing: -3px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-visual {
+                height: 380px;
+            }
+
+            .tech-image-wrapper {
+                border-radius: 20px;
+            }
+
+            .tech-image {
+                height: 300px;
+            }
+
+            .tech-card {
+                padding: 10px 12px;
+            }
+
+            .tech-card strong {
+                font-size: 11px;
+            }
+
+            .tech-card small {
+                font-size: 9px;
+            }
+
+            .tech-icon {
+                width: 30px;
+                height: 30px;
+
+                font-size: 15px;
+            }
+
+            .tech-card-ai {
+                top: 10px;
+                right: -5px;
+            }
+
+            .tech-card-network {
+                bottom: 25px;
+                left: -5px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .customers-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .floating-whatsapp {
+                right: 18px;
+                bottom: 18px;
+
+                width: 52px;
+                height: 52px;
+            }
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            <span class="logo-pro">PRO</span>
+            <span class="logo-computer">COMPUTER</span>
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu">
+            ☰
+        </button>
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#customers">Customers</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact Us</a>
+            </li>
+
+            <li>
+                <a
+                    href="https://wa.me/60173668893"
+                    target="_blank"
+                    class="nav-whatsapp">
+                    WhatsApp
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-bg"></div>
+
+
+    <div class="hero-container">
+
+
+        <!-- LEFT -->
+
+        <div class="hero-content reveal-left">
+
+            <div class="hero-eyebrow">
+                <span></span>
+                ESTABLISHED 1994
+            </div>
+
+
+            <h1>
+                Technology<br>
+                <span>Made Simple.</span>
+            </h1>
+
+
+            <p>
+                Complete technology solutions for homes, schools,
+                businesses and government — from computers and
+                networking to AI, smart classrooms, LED displays
+                and security systems.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="https://wa.me/60173668893"
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    WhatsApp Us
+
+                </a>
+
+
+                <a
+                    href="#services"
+                    class="btn btn-secondary">
+
+                    Explore Services
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT TECHNOLOGY IMAGE -->
+
+        <div class="hero-visual reveal-right">
+
+            <div class="tech-glow"></div>
+
+
+            <div class="tech-image-wrapper">
+
+                <img
+                    src="ai-technology.jpg"
+                    alt="AI and modern technology solutions"
+                    class="tech-image">
+
+            </div>
+
+
+            <!-- AI FLOATING CARD -->
+
+            <div class="tech-card tech-card-ai">
+
+                <div class="tech-icon">
+                    ✦
+                </div>
+
+                <div>
+                    <strong>AI Technology</strong>
+                    <small>Smart Solutions</small>
+                </div>
+
+            </div>
+
+
+            <!-- NETWORK FLOATING CARD -->
+
+            <div class="tech-card tech-card-network">
+
+                <div class="tech-icon">
+                    ⌁
+                </div>
+
+                <div>
+                    <strong>Connected</strong>
+                    <small>Digital Infrastructure</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+
+            <div class="stat reveal">
+
+                <div class="stat-number">
+                    30<span>+</span>
+                </div>
+
+                <div class="stat-label">
+                    Years of Experience
+                </div>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <div class="stat-number">
+                    1994
+                </div>
+
+                <div class="stat-label">
+                    Established
+                </div>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <div class="stat-number">
+                    8
+                </div>
+
+                <div class="stat-label">
+                    Technology Services
+                </div>
+
+            </div>
+
+
+            <div class="stat reveal">
+
+                <div class="stat-number">
+                    1
+                </div>
+
+                <div class="stat-label">
+                    Trusted Local Partner
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="reveal-left">
+
+                <div class="section-label">
+                    Our Story
+                </div>
+
+                <div class="about-number">
+                    1994
+                </div>
+
+            </div>
+
+
+            <div class="about-content reveal-right">
+
+                <h3>
+                    More than three decades of
+                    connecting our community
+                    with technology.
+                </h3>
+
+
+                <p>
+                    Pro Computer Center was founded in 1994 by
+                    Mr Pua Lai Eng, who grew up in a farming
+                    family and developed a strong interest in
+                    technology from a young age.
+                </p>
+
+
+                <p>
+                    Starting from the local community, the
+                    business initially focused on providing
+                    computer lessons and education, helping
+                    people gain their first exposure to
+                    computers and modern technology.
+                </p>
+
+
+                <p>
+                    Over the years, Pro Computer Center
+                    expanded its services to meet the changing
+                    needs of the community — from computers,
+                    laptops and accessories to accounting
+                    software support, CCTV, networking,
+                    printers, LED displays and smart classroom
+                    technology.
+                </p>
+
+
+                <p>
+                    Today, we continue to combine experience,
+                    technical knowledge and practical solutions
+                    to help individuals, schools, businesses
+                    and organisations use technology with
+                    confidence.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section services" id="services">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                What We Do
+            </div>
+
+            <h2 class="section-title">
+                Complete technology
+                solutions.
+            </h2>
+
+            <p class="section-description">
+                From everyday computer needs to complete
+                technology infrastructure, we provide
+                practical solutions under one roof.
+            </p>
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Computer Sales
+                </h3>
+
+                <p>
+                    Desktop computers and complete computer
+                    solutions for home, business and
+                    professional use.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    Computer Repair
+                </h3>
+
+                <p>
+                    Hardware troubleshooting, repairs,
+                    upgrades and technical support.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    💼
+                </div>
+
+                <h3>
+                    Laptop & Accessories
+                </h3>
+
+                <p>
+                    Laptops, peripherals, accessories and
+                    essential technology products.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    LED Display
+                </h3>
+
+                <p>
+                    LED display solutions for businesses,
+                    schools, events and public spaces.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Smart Classroom
+                </h3>
+
+                <p>
+                    Interactive education equipment for
+                    primary and secondary schools.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Networking
+                </h3>
+
+                <p>
+                    Network infrastructure, connectivity
+                    and technology setup for organisations.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    📹
+                </div>
+
+                <h3>
+                    CCTV
+                </h3>
+
+                <p>
+                    Security camera systems for homes,
+                    shops, offices and organisations.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card reveal">
+
+                <div class="service-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Accounting Software
+                </h3>
+
+                <p>
+                    Accounting software support and
+                    assistance for businesses and shops.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CUSTOMERS
+========================= -->
+
+<section class="section customers" id="customers">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Who We Serve
+            </div>
+
+            <h2 class="section-title">
+                Technology for
+                every need.
+            </h2>
+
+            <p class="section-description">
+                We support customers across different
+                industries and environments.
+            </p>
+
+        </div>
+
+
+
+        <div class="customers-grid">
+
+
+            <div class="customer-card reveal">
+
+                <div class="customer-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Individuals
+                </h3>
+
+            </div>
+
+
+            <div class="customer-card reveal">
+
+                <div class="customer-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Schools
+                </h3>
+
+            </div>
+
+
+            <div class="customer-card reveal">
+
+                <div class="customer-icon">
+                    🏛️
+                </div>
+
+                <h3>
+                    Government
+                </h3>
+
+            </div>
+
+
+            <div class="customer-card reveal">
+
+                <div class="customer-icon">
+                    🏢
+                </div>
+
+                <h3>
+                    Companies
+                </h3>
+
+            </div>
+
+
+            <div class="customer-card reveal">
+
+                <div class="customer-icon">
+                    🏪
+                </div>
+
+                <h3>
+                    Shops
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section class="section why-us">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Why Pro Computer Center
+            </div>
+
+            <h2 class="section-title">
+                Experience you
+                can rely on.
+            </h2>
+
+        </div>
+
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card reveal">
+
+                <div class="why-card-number">
+                    01
+                </div>
+
+                <h3>
+                    Since 1994
+                </h3>
+
+                <p>
+                    More than three decades of experience
+                    serving the local community with
+                    technology.
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card reveal">
+
+                <div class="why-card-number">
+                    02
+                </div>
+
+                <h3>
+                    One-Stop Technology
+                </h3>
+
+                <p>
+                    Computers, networking, CCTV, LED,
+                    smart classroom and business technology
+                    solutions in one place.
+                </p>
+
+            </div>
+
+
+
+            <div class="why-card reveal">
+
+                <div class="why-card-number">
+                    03
+                </div>
+
+                <h3>
+                    Local Technical Support
+                </h3>
+
+                <p>
+                    Practical technical assistance from a
+                    local team that understands the needs
+                    of our community.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-content reveal">
+
+            <div>
+
+                <h2>
+                    Need a technology
+                    solution?
+                </h2>
+
+                <p>
+                    Talk to Pro Computer Center today and
+                    let us help you find the right solution.
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/60173668893"
+                target="_blank"
+                class="btn">
+
+                Talk to Us on WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact" id="contact">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Contact Us
+            </div>
+
+            <h2 class="section-title">
+                Let's talk
+                technology.
+            </h2>
+
+            <p class="section-description">
+                Visit us in Sekinchan or contact us directly
+                for enquiries and technology solutions.
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-details reveal-left">
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Address
+                        </h4>
+
+                        <p>
+                            Lot 193, Jalan Haji Jamil,<br>
+                            Pekan Sekinchan,<br>
+                            45400 Sekinchan,<br>
+                            Selangor, Malaysia
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Phone
+                        </h4>
+
+                        <a href="tel:+60173668893">
+                            +60 17-366 8893
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            WhatsApp
+                        </h4>
+
+                        <a
+                            href="https://wa.me/60173668893"
+                            target="_blank">
+
+                            Chat with us
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- GOOGLE MAP -->
+
+            <div class="map reveal-right">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Lot%20193%2C%20Jalan%20Haji%20Jamil%2C%20Sekinchan%2C%20Selangor&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <span class="logo-pro">
+                    PRO
+                </span>
+
+                <span class="logo-computer">
+                    COMPUTER
+                </span>
+
+            </div>
+
+
+            <div class="footer-copy">
+
+                © 2026 Pro Computer Center.
+                All rights reserved.
+
+            </div>
+
+
+            <div class="footer-copy">
+
+                Established 1994 · Sekinchan, Selangor
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/60173668893"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Contact Pro Computer Center on WhatsApp">
+
+    ☎
+
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+    /* =========================
+       NAVBAR SCROLL
+    ========================= */
+
+    const navbar =
+        document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 50) {
+
+            navbar.classList.add("scrolled");
+
+        } else {
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    });
+
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+
+    menuToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+
+    /* CLOSE MENU AFTER CLICK */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================= */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".reveal, .reveal-left, .reveal-right"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealElements.forEach(element => {
+
+        observer.observe(element);
+
+    });
+
+
+
+    /* =========================
+       SMOOTH NAVIGATION
+    ========================= */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
+
+            anchor.addEventListener("click", function(e) {
+
+                const target =
+                    document.querySelector(
+                        this.getAttribute("href")
+                    );
+
+                if (!target) return;
+
+                e.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            });
+
+        });
+
+
+</script>
+
+</body>
+</html>
