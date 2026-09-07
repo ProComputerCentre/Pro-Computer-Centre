@@ -7,7 +7,7 @@
     <title>Pro Computer Center | Technology Made Simple</title>
 
     <meta name="description"
-          content="Pro Computer Center - Trusted technology solutions since 1994. Computers, laptops, repair, LED displays, smart classrooms, networking, CCTV and accounting software support in Sekinchan, Selangor.">
+        content="Pro Computer Center - Trusted technology solutions since 1994. Computers, laptops, repair, LED displays, smart classrooms, networking, CCTV and accounting software support in Sekinchan, Selangor.">
 
     <style>
 
@@ -179,12 +179,15 @@
             color: rgba(255,255,255,0.75);
             font-size: 14px;
             font-weight: 600;
-
             transition: color 0.25s ease;
         }
 
         .nav-links a:hover {
             color: var(--white);
+        }
+
+        .nav-links a.active-page {
+            color: var(--turquoise);
         }
 
         .nav-whatsapp {
@@ -207,10 +210,13 @@
 
         .menu-toggle {
             display: none;
+
             background: none;
             border: none;
+
             color: white;
             font-size: 28px;
+
             cursor: pointer;
         }
 
@@ -234,11 +240,13 @@
                     rgba(67,196,196,0.10),
                     transparent 35%
                 ),
+
                 radial-gradient(
                     circle at 20% 80%,
                     rgba(233,120,85,0.08),
                     transparent 35%
                 ),
+
                 var(--dark);
         }
 
@@ -251,6 +259,7 @@
                     rgba(255,255,255,0.015) 1px,
                     transparent 1px
                 ),
+
                 linear-gradient(
                     90deg,
                     rgba(255,255,255,0.015) 1px,
@@ -259,11 +268,12 @@
 
             background-size: 60px 60px;
 
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent
-            );
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent
+                );
 
             pointer-events: none;
         }
@@ -273,7 +283,9 @@
             margin: auto;
 
             display: grid;
-            grid-template-columns: 0.95fr 1.05fr;
+
+            grid-template-columns:
+                0.95fr 1.05fr;
 
             align-items: center;
 
@@ -300,7 +312,6 @@
 
             font-size: 13px;
             font-weight: 800;
-
             letter-spacing: 2px;
 
             margin-bottom: 22px;
@@ -309,6 +320,7 @@
         .hero-eyebrow span {
             width: 35px;
             height: 2px;
+
             background: var(--orange);
         }
 
@@ -316,7 +328,6 @@
             font-size: clamp(55px, 7vw, 90px);
 
             line-height: 0.98;
-
             letter-spacing: -5px;
 
             margin-bottom: 28px;
@@ -342,7 +353,9 @@
         .hero-buttons {
             display: flex;
             align-items: center;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
@@ -371,6 +384,7 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
+
             box-shadow:
                 0 20px 45px rgba(233,120,85,0.30);
         }
@@ -383,6 +397,7 @@
         .btn-secondary:hover {
             border-color: var(--turquoise);
             color: var(--turquoise);
+
             transform: translateY(-3px);
         }
 
@@ -422,7 +437,8 @@
 
             filter: blur(25px);
 
-            animation: pulseGlow 5s ease-in-out infinite;
+            animation:
+                pulseGlow 5s ease-in-out infinite;
         }
 
         @keyframes pulseGlow {
@@ -430,12 +446,16 @@
             0%,
             100% {
                 opacity: 0.65;
-                transform: translateY(-50%) scale(1);
+                transform:
+                    translateY(-50%)
+                    scale(1);
             }
 
             50% {
                 opacity: 1;
-                transform: translateY(-50%) scale(1.08);
+                transform:
+                    translateY(-50%)
+                    scale(1.08);
             }
         }
 
@@ -450,7 +470,6 @@
             z-index: 2;
 
             border-radius: 28px;
-
             overflow: hidden;
 
             transform:
@@ -488,7 +507,8 @@
 
             object-fit: cover;
 
-            transition: transform 0.8s ease;
+            transition:
+                transform 0.8s ease;
         }
 
         .tech-image-wrapper:hover .tech-image {
@@ -531,7 +551,6 @@
             display: block;
 
             color: white;
-
             font-size: 14px;
         }
 
@@ -620,7 +639,6 @@
         .stat-number {
             font-size: 35px;
             font-weight: 900;
-
             color: white;
         }
 
@@ -655,19 +673,18 @@
 
         .about-number {
             font-size: 170px;
-
             line-height: 0.8;
 
             font-weight: 900;
 
-            color: rgba(233,120,85,0.08);
+            color:
+                rgba(233,120,85,0.08);
 
             letter-spacing: -12px;
         }
 
         .about-content h3 {
             font-size: 34px;
-
             line-height: 1.15;
 
             margin-bottom: 25px;
@@ -675,7 +692,6 @@
 
         .about-content p {
             color: var(--gray);
-
             font-size: 16px;
 
             margin-bottom: 18px;
@@ -700,6 +716,8 @@
         }
 
         .service-card {
+            display: block;
+
             padding: 32px 26px;
 
             background:
@@ -756,6 +774,15 @@
             color: var(--gray);
 
             font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--turquoise);
+
+            font-size: 13px;
+            font-weight: 800;
         }
 
 
@@ -789,7 +816,8 @@
             background:
                 rgba(255,255,255,0.025);
 
-            transition: all 0.3s ease;
+            transition:
+                all 0.3s ease;
         }
 
         .customer-card:hover {
@@ -879,7 +907,6 @@
                 );
 
             position: relative;
-
             overflow: hidden;
         }
 
@@ -902,13 +929,10 @@
 
         .cta-content {
             position: relative;
-
             z-index: 2;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             gap: 40px;
@@ -926,14 +950,14 @@
         .cta p {
             margin-top: 15px;
 
-            color: rgba(255,255,255,0.82);
+            color:
+                rgba(255,255,255,0.82);
 
             max-width: 600px;
         }
 
         .cta .btn {
             background: white;
-
             color: var(--dark);
 
             flex-shrink: 0;
@@ -966,7 +990,6 @@
 
         .contact-details {
             display: flex;
-
             flex-direction: column;
 
             gap: 25px;
@@ -1053,21 +1076,20 @@
             display: flex;
 
             justify-content: space-between;
-
             align-items: center;
 
             gap: 20px;
         }
 
         .footer-copy {
-            color: rgba(255,255,255,0.45);
+            color:
+                rgba(255,255,255,0.45);
 
             font-size: 12px;
         }
 
         .footer-brand {
             display: flex;
-
             align-items: center;
 
             gap: 7px;
@@ -1238,6 +1260,7 @@
 
             .about-grid {
                 grid-template-columns: 1fr;
+
                 gap: 30px;
             }
 
@@ -1275,7 +1298,8 @@
 
                 pointer-events: none;
 
-                transition: all 0.3s ease;
+                transition:
+                    all 0.3s ease;
             }
 
             .nav-links.active {
@@ -1423,8 +1447,12 @@
             *::before,
             *::after {
                 animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
             }
         }
 
@@ -1443,9 +1471,16 @@
 
     <div class="nav-container">
 
-        <a href="#home" class="logo">
-            <span class="logo-pro">PRO</span>
-            <span class="logo-computer">COMPUTER</span>
+        <a href="index.html" class="logo">
+
+            <span class="logo-pro">
+                PRO
+            </span>
+
+            <span class="logo-computer">
+                COMPUTER
+            </span>
+
         </a>
 
 
@@ -1453,30 +1488,43 @@
             class="menu-toggle"
             id="menuToggle"
             aria-label="Open navigation menu">
+
             ☰
+
         </button>
 
 
         <ul class="nav-links" id="navLinks">
 
             <li>
-                <a href="#home">Home</a>
+                <a href="index.html">
+                    Home
+                </a>
             </li>
 
             <li>
-                <a href="#about">About</a>
+                <a href="index.html#about">
+                    About
+                </a>
             </li>
 
             <li>
-                <a href="#services">Services</a>
+                <a href="services.html"
+                   class="active-page">
+                    Services
+                </a>
             </li>
 
             <li>
-                <a href="#customers">Customers</a>
+                <a href="index.html#customers">
+                    Customers
+                </a>
             </li>
 
             <li>
-                <a href="#contact">Contact Us</a>
+                <a href="index.html#contact">
+                    Contact Us
+                </a>
             </li>
 
             <li>
@@ -1484,7 +1532,9 @@
                     href="https://wa.me/60173668893"
                     target="_blank"
                     class="nav-whatsapp">
+
                     WhatsApp
+
                 </a>
             </li>
 
@@ -1493,7 +1543,6 @@
     </div>
 
 </header>
-
 
 
 <!-- =========================
@@ -1513,22 +1562,30 @@
         <div class="hero-content reveal-left">
 
             <div class="hero-eyebrow">
+
                 <span></span>
+
                 ESTABLISHED 1994
+
             </div>
 
 
             <h1>
+
                 Technology<br>
+
                 <span>Made Simple.</span>
+
             </h1>
 
 
             <p>
-                Complete technology solutions for homes, schools,
-                businesses and government — from computers and
-                networking to AI, smart classrooms, LED displays
-                and security systems.
+
+                Complete technology solutions for homes,
+                schools, businesses and government — from
+                computers and networking to smart classrooms,
+                LED displays and security systems.
+
             </p>
 
 
@@ -1557,7 +1614,6 @@
         </div>
 
 
-
         <!-- RIGHT TECHNOLOGY IMAGE -->
 
         <div class="hero-visual reveal-right">
@@ -1575,8 +1631,6 @@
             </div>
 
 
-            <!-- AI FLOATING CARD -->
-
             <div class="tech-card tech-card-ai">
 
                 <div class="tech-icon">
@@ -1584,14 +1638,19 @@
                 </div>
 
                 <div>
-                    <strong>AI Technology</strong>
-                    <small>Smart Solutions</small>
+
+                    <strong>
+                        AI Technology
+                    </strong>
+
+                    <small>
+                        Smart Solutions
+                    </small>
+
                 </div>
 
             </div>
 
-
-            <!-- NETWORK FLOATING CARD -->
 
             <div class="tech-card tech-card-network">
 
@@ -1600,8 +1659,15 @@
                 </div>
 
                 <div>
-                    <strong>Connected</strong>
-                    <small>Digital Infrastructure</small>
+
+                    <strong>
+                        Connected
+                    </strong>
+
+                    <small>
+                        Digital Infrastructure
+                    </small>
+
                 </div>
 
             </div>
@@ -1611,7 +1677,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1683,7 +1748,6 @@
 </section>
 
 
-
 <!-- =========================
      ABOUT
 ========================= -->
@@ -1711,46 +1775,60 @@
             <div class="about-content reveal-right">
 
                 <h3>
+
                     More than three decades of
                     connecting our community
                     with technology.
+
                 </h3>
 
 
                 <p>
-                    Pro Computer Center was founded in 1994 by
-                    Mr Pua Lai Eng, who grew up in a farming
-                    family and developed a strong interest in
-                    technology from a young age.
+
+                    Pro Computer Center was founded in
+                    1994 by Mr Pua Lai Eng, who grew up
+                    in a farming family and developed a
+                    strong interest in technology from a
+                    young age.
+
                 </p>
 
 
                 <p>
-                    Starting from the local community, the
-                    business initially focused on providing
-                    computer lessons and education, helping
-                    people gain their first exposure to
-                    computers and modern technology.
+
+                    Starting from the local community,
+                    the business initially focused on
+                    providing computer lessons and
+                    education, helping people gain their
+                    first exposure to computers and
+                    modern technology.
+
                 </p>
 
 
                 <p>
+
                     Over the years, Pro Computer Center
-                    expanded its services to meet the changing
-                    needs of the community — from computers,
-                    laptops and accessories to accounting
-                    software support, CCTV, networking,
-                    printers, LED displays and smart classroom
+                    expanded its services to meet the
+                    changing needs of the community —
+                    from computers, laptops and
+                    accessories to accounting software
+                    support, CCTV, networking, printers,
+                    LED displays and smart classroom
                     technology.
+
                 </p>
 
 
                 <p>
-                    Today, we continue to combine experience,
-                    technical knowledge and practical solutions
-                    to help individuals, schools, businesses
-                    and organisations use technology with
+
+                    Today, we continue to combine
+                    experience, technical knowledge and
+                    practical solutions to help
+                    individuals, schools, businesses and
+                    organisations use technology with
                     confidence.
+
                 </p>
 
             </div>
@@ -1760,7 +1838,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1779,24 +1856,31 @@
             </div>
 
             <h2 class="section-title">
+
                 Complete technology
                 solutions.
+
             </h2>
 
             <p class="section-description">
+
                 From everyday computer needs to complete
                 technology infrastructure, we provide
                 practical solutions under one roof.
+
             </p>
 
         </div>
 
 
-
         <div class="services-grid">
 
 
-            <div class="service-card reveal">
+            <!-- 01 -->
+
+            <a
+                href="services.html#computer-sales"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     💻
@@ -1807,16 +1891,23 @@
                 </h3>
 
                 <p>
-                    Desktop computers and complete computer
-                    solutions for home, business and
-                    professional use.
+                    Desktop computers and complete
+                    computer solutions for home,
+                    business and professional use.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
 
+            <!-- 02 -->
 
-            <div class="service-card reveal">
+            <a
+                href="services.html#computer-repair"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     🔧
@@ -1831,11 +1922,18 @@
                     upgrades and technical support.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
 
+            <!-- 03 -->
 
-            <div class="service-card reveal">
+            <a
+                href="services.html#laptop-accessories"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     💼
@@ -1846,15 +1944,22 @@
                 </h3>
 
                 <p>
-                    Laptops, peripherals, accessories and
-                    essential technology products.
+                    Laptops, peripherals, accessories
+                    and essential technology products.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
 
+            <!-- 04 -->
 
-            <div class="service-card reveal">
+            <a
+                href="services.html#led-display"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     🖥️
@@ -1869,11 +1974,18 @@
                     schools, events and public spaces.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
 
+            <!-- 05 -->
 
-            <div class="service-card reveal">
+            <a
+                href="services.html#smart-classroom"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     🎓
@@ -1888,11 +2000,18 @@
                     primary and secondary schools.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
 
+            <!-- 06 -->
 
-            <div class="service-card reveal">
+            <a
+                href="services.html#networking"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     🌐
@@ -1907,11 +2026,18 @@
                     and technology setup for organisations.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
 
+            <!-- 07 -->
 
-            <div class="service-card reveal">
+            <a
+                href="services.html#cctv"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     📹
@@ -1926,11 +2052,18 @@
                     shops, offices and organisations.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
 
+            <!-- 08 -->
 
-            <div class="service-card reveal">
+            <a
+                href="services.html#accounting"
+                class="service-card reveal">
 
                 <div class="service-icon">
                     📊
@@ -1945,14 +2078,17 @@
                     assistance for businesses and shops.
                 </p>
 
-            </div>
+                <span class="service-link">
+                    Learn More →
+                </span>
+
+            </a>
 
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -1971,17 +2107,20 @@
             </div>
 
             <h2 class="section-title">
+
                 Technology for
                 every need.
+
             </h2>
 
             <p class="section-description">
+
                 We support customers across different
                 industries and environments.
+
             </p>
 
         </div>
-
 
 
         <div class="customers-grid">
@@ -2058,7 +2197,6 @@
 </section>
 
 
-
 <!-- =========================
      WHY US
 ========================= -->
@@ -2075,12 +2213,13 @@
             </div>
 
             <h2 class="section-title">
+
                 Experience you
                 can rely on.
+
             </h2>
 
         </div>
-
 
 
         <div class="why-grid">
@@ -2105,7 +2244,6 @@
             </div>
 
 
-
             <div class="why-card reveal">
 
                 <div class="why-card-number">
@@ -2118,12 +2256,11 @@
 
                 <p>
                     Computers, networking, CCTV, LED,
-                    smart classroom and business technology
-                    solutions in one place.
+                    smart classroom and business
+                    technology solutions in one place.
                 </p>
 
             </div>
-
 
 
             <div class="why-card reveal">
@@ -2137,9 +2274,9 @@
                 </h3>
 
                 <p>
-                    Practical technical assistance from a
-                    local team that understands the needs
-                    of our community.
+                    Practical technical assistance from
+                    a local team that understands the
+                    needs of our community.
                 </p>
 
             </div>
@@ -2149,7 +2286,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -2170,8 +2306,9 @@
                 </h2>
 
                 <p>
-                    Talk to Pro Computer Center today and
-                    let us help you find the right solution.
+                    Talk to Pro Computer Center today
+                    and let us help you find the right
+                    solution.
                 </p>
 
             </div>
@@ -2193,7 +2330,6 @@
 </section>
 
 
-
 <!-- =========================
      CONTACT
 ========================= -->
@@ -2210,17 +2346,21 @@
             </div>
 
             <h2 class="section-title">
+
                 Let's talk
                 technology.
+
             </h2>
 
             <p class="section-description">
-                Visit us in Sekinchan or contact us directly
-                for enquiries and technology solutions.
+
+                Visit us in Sekinchan or contact us
+                directly for enquiries and technology
+                solutions.
+
             </p>
 
         </div>
-
 
 
         <div class="contact-grid">
@@ -2253,7 +2393,6 @@
                 </div>
 
 
-
                 <div class="contact-item">
 
                     <div class="contact-icon">
@@ -2273,7 +2412,6 @@
                     </div>
 
                 </div>
-
 
 
                 <div class="contact-item">
@@ -2304,7 +2442,6 @@
             </div>
 
 
-
             <!-- GOOGLE MAP -->
 
             <div class="map reveal-right">
@@ -2322,7 +2459,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================
@@ -2370,7 +2506,6 @@
 </footer>
 
 
-
 <!-- =========================
      FLOATING WHATSAPP
 ========================= -->
@@ -2386,17 +2521,13 @@
 </a>
 
 
-
 <!-- =========================
      JAVASCRIPT
 ========================= -->
 
 <script>
 
-
-    /* =========================
-       NAVBAR SCROLL
-    ========================= */
+    /* NAVBAR SCROLL */
 
     const navbar =
         document.getElementById("navbar");
@@ -2416,10 +2547,7 @@
     });
 
 
-
-    /* =========================
-       MOBILE MENU
-    ========================= */
+    /* MOBILE MENU */
 
     const menuToggle =
         document.getElementById("menuToggle");
@@ -2435,7 +2563,7 @@
     });
 
 
-    /* CLOSE MENU AFTER CLICK */
+    /* CLOSE MENU */
 
     document
         .querySelectorAll(".nav-links a")
@@ -2450,10 +2578,7 @@
         });
 
 
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
+    /* SCROLL REVEAL */
 
     const revealElements =
         document.querySelectorAll(
@@ -2471,7 +2596,9 @@
 
                         entry.target.classList.add("active");
 
-                        observer.unobserve(entry.target);
+                        observer.unobserve(
+                            entry.target
+                        );
 
                     }
 
@@ -2491,34 +2618,33 @@
     });
 
 
-
-    /* =========================
-       SMOOTH NAVIGATION
-    ========================= */
+    /* SMOOTH NAVIGATION */
 
     document
         .querySelectorAll('a[href^="#"]')
         .forEach(anchor => {
 
-            anchor.addEventListener("click", function(e) {
+            anchor.addEventListener(
+                "click",
+                function(e) {
 
-                const target =
-                    document.querySelector(
-                        this.getAttribute("href")
-                    );
+                    const target =
+                        document.querySelector(
+                            this.getAttribute("href")
+                        );
 
-                if (!target) return;
+                    if (!target) return;
 
-                e.preventDefault();
+                    e.preventDefault();
 
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
+                    target.scrollIntoView({
+                        behavior: "smooth"
+                    });
 
-            });
+                }
+            );
 
         });
-
 
 </script>
 
