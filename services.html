@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Pro Computer Center</title>
+
+    <meta name="description"
+          content="Explore Pro Computer Center's technology services including computer sales, repair, laptops, accessories, LED displays, smart classrooms, networking, CCTV and accounting software support.">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: #171D23;
+            color: white;
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        :root {
+            --orange: #E97855;
+            --turquoise: #43C4C4;
+            --dark: #171D23;
+            --dark-2: #1D252D;
+            --dark-3: #222C35;
+            --white: #ffffff;
+            --gray: #AAB4BD;
+        }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 110px 0;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+
+            z-index: 1000;
+
+            background:
+                rgba(23,29,35,0.70);
+
+            backdrop-filter:
+                blur(14px);
+
+            border-bottom:
+                1px solid rgba(255,255,255,0.05);
+
+            transition:
+                all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            height: 68px;
+
+            background:
+                rgba(23,29,35,0.96);
+        }
+
+        .nav-container {
+            width: min(1200px, 92%);
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
+
+            white-space: nowrap;
+        }
+
+        .logo-pro {
+            color: var(--orange);
+
+            font-size: 24px;
+            font-weight: 900;
+
+            font-style: italic;
+
+            letter-spacing: -1px;
+        }
+
+        .logo-computer {
+            color: var(--turquoise);
+
+            font-size: 17px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* NAVIGATION */
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 34px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            color:
+                rgba(255,255,255,0.75);
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .nav-links .active {
+            color: var(--turquoise);
+        }
+
+        .nav-whatsapp {
+            background: var(--orange);
+
+            color: white !important;
+
+            padding: 10px 17px;
+
+            border-radius: 8px;
+
+            transition:
+                all 0.25s ease;
+        }
+
+        .nav-whatsapp:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 25px
+                rgba(233,120,85,0.25);
+        }
+
+
+        /* MOBILE */
+
+        .menu-toggle {
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            color: white;
+
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           PAGE HERO
+        ========================= */
+
+        .page-hero {
+
+            min-height: 560px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 75% 40%,
+                    rgba(67,196,196,0.13),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 15% 80%,
+                    rgba(233,120,85,0.10),
+                    transparent 35%
+                ),
+
+                var(--dark);
+        }
+
+        .page-grid {
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.015) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent
+                );
+        }
+
+        .page-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 850px;
+
+            padding-top: 70px;
+        }
+
+        .eyebrow {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--turquoise);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 22px;
+        }
+
+        .eyebrow span {
+
+            width: 35px;
+            height: 2px;
+
+            background:
+                var(--orange);
+        }
+
+        .page-hero h1 {
+
+            font-size:
+                clamp(50px, 7vw, 86px);
+
+            line-height:
+                0.98;
+
+            letter-spacing:
+                -5px;
+
+            margin-bottom:
+                25px;
+        }
+
+        .page-hero h1 span {
+            color:
+                var(--orange);
+        }
+
+        .page-hero p {
+
+            max-width: 700px;
+
+            color: var(--gray);
+
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           SERVICES INTRO
+        ========================= */
+
+        .services-intro {
+
+            background:
+                var(--dark-2);
+        }
+
+        .intro-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .intro-title {
+
+            font-size:
+                clamp(35px, 5vw, 55px);
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -2px;
+        }
+
+        .intro-title span {
+            color:
+                var(--orange);
+        }
+
+        .intro-text {
+
+            color: var(--gray);
+
+            font-size: 16px;
+        }
+
+
+        /* =========================
+           SERVICE DETAIL
+        ========================= */
+
+        .service-section {
+
+            padding: 115px 0;
+
+            background:
+                var(--dark);
+        }
+
+        .service-section:nth-child(even) {
+
+            background:
+                var(--dark-2);
+        }
+
+        .service-detail {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .service-detail.reverse {
+
+            direction: rtl;
+        }
+
+        .service-detail.reverse > * {
+
+            direction: ltr;
+        }
+
+
+        /* IMAGE */
+
+        .service-image {
+
+            position: relative;
+
+            min-height: 430px;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            background:
+                var(--dark-3);
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,0.35);
+        }
+
+        .service-image img {
+
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.7s ease;
+        }
+
+        .service-image:hover img {
+
+            transform:
+                scale(1.04);
+        }
+
+
+        /* IMAGE PLACEHOLDER */
+
+        .image-placeholder {
+
+            width: 100%;
+
+            height: 430px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 15px;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    rgba(67,196,196,0.12),
+                    transparent 60%
+                );
+        }
+
+        .image-placeholder-icon {
+
+            font-size: 70px;
+        }
+
+        .image-placeholder-text {
+
+            color:
+                rgba(255,255,255,0.40);
+
+            font-size: 13px;
+
+            letter-spacing: 1px;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        /* SERVICE CONTENT */
+
+        .service-number {
+
+            color:
+                var(--orange);
+
+            font-size: 13px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 16px;
+        }
+
+        .service-content h2 {
+
+            font-size:
+                clamp(34px, 4vw, 50px);
+
+            line-height:
+                1.05;
+
+            letter-spacing:
+                -2px;
+
+            margin-bottom: 20px;
+        }
+
+        .service-content > p {
+
+            color:
+                var(--gray);
+
+            font-size: 16px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* FEATURES */
+
+        .features {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 10px 25px;
+
+            margin-bottom: 30px;
+        }
+
+        .feature {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color:
+                rgba(255,255,255,0.82);
+
+            font-size: 14px;
+        }
+
+        .feature::before {
+
+            content: "✓";
+
+            width: 22px;
+            height: 22px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background:
+                rgba(67,196,196,0.10);
+
+            color:
+                var(--turquoise);
+
+            font-size: 12px;
+
+            font-weight: 900;
+        }
+
+
+        /* BUTTON */
+
+        .service-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding:
+                13px 22px;
+
+            border-radius: 8px;
+
+            background:
+                var(--orange);
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition:
+                all 0.3s ease;
+        }
+
+        .service-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(233,120,85,0.25);
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+
+            padding: 100px 0;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    120deg,
+                    var(--orange),
+                    #d96443
+                );
+        }
+
+        .cta::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            right: -160px;
+            top: -250px;
+
+            background:
+                rgba(255,255,255,0.08);
+        }
+
+        .cta-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+        .cta h2 {
+
+            font-size:
+                clamp(35px, 5vw, 58px);
+
+            line-height: 1;
+
+            letter-spacing:
+                -2px;
+        }
+
+        .cta p {
+
+            margin-top: 15px;
+
+            color:
+                rgba(255,255,255,0.82);
+
+            max-width: 650px;
+        }
+
+        .cta-button {
+
+            flex-shrink: 0;
+
+            background:
+                white;
+
+            color:
+                var(--dark);
+
+            padding:
+                14px 24px;
+
+            border-radius:
+                9px;
+
+            font-size:
+                14px;
+
+            font-weight:
+                800;
+
+            transition:
+                all 0.3s ease;
+        }
+
+        .cta-button:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.18);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding:
+                35px 0;
+
+            background:
+                #11161B;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.05);
+        }
+
+        .footer-content {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap: 20px;
+        }
+
+        .footer-brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+        .footer-copy {
+
+            color:
+                rgba(255,255,255,0.45);
+
+            font-size:
+                12px;
+        }
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        .floating-whatsapp {
+
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                #25D366;
+
+            color: white;
+
+            font-size: 26px;
+
+            z-index: 999;
+
+            box-shadow:
+                0 10px 30px
+                rgba(0,0,0,0.30);
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .floating-whatsapp:hover {
+
+            transform:
+                scale(1.1);
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(60px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal-left {
+
+            opacity: 0;
+
+            transform:
+                translateX(-70px);
+
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s ease;
+        }
+
+        .reveal-right {
+
+            opacity: 0;
+
+            transform:
+                translateX(70px);
+
+            transition:
+                opacity 0.9s ease,
+                transform 0.9s ease;
+        }
+
+        .active {
+
+            opacity: 1;
+
+            transform:
+                translate(0,0);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .service-detail {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 45px;
+            }
+
+            .service-detail.reverse {
+
+                direction: ltr;
+            }
+
+            .intro-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 25px;
+            }
+
+            .service-image {
+
+                min-height: 350px;
+            }
+
+            .service-image img,
+            .image-placeholder {
+
+                height: 350px;
+            }
+
+            .cta-content {
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+            }
+        }
+
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 68px;
+                left: 0;
+
+                width: 100%;
+
+                padding: 25px;
+
+                background:
+                    rgba(23,29,35,0.98);
+
+                backdrop-filter:
+                    blur(15px);
+
+                flex-direction:
+                    column;
+
+                gap: 22px;
+
+                transform:
+                    translateY(-150%);
+
+                opacity: 0;
+
+                pointer-events: none;
+
+                transition:
+                    all 0.3s ease;
+            }
+
+            .nav-links.active {
+
+                transform:
+                    translateY(0);
+
+                opacity: 1;
+
+                pointer-events: auto;
+            }
+
+            .menu-toggle {
+
+                display: block;
+            }
+
+            .page-hero {
+
+                min-height:
+                    500px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .section {
+
+                padding:
+                    80px 0;
+            }
+
+            .page-hero {
+
+                min-height:
+                    500px;
+            }
+
+            .page-hero h1 {
+
+                font-size:
+                    52px;
+
+                letter-spacing:
+                    -3px;
+            }
+
+            .page-hero p {
+
+                font-size:
+                    16px;
+            }
+
+            .features {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .service-image {
+
+                border-radius:
+                    18px;
+            }
+
+            .service-image img,
+            .image-placeholder {
+
+                height:
+                    280px;
+            }
+
+            .image-placeholder-icon {
+
+                font-size:
+                    55px;
+            }
+
+            .footer-content {
+
+                flex-direction:
+                    column;
+
+                text-align:
+                    center;
+            }
+
+            .floating-whatsapp {
+
+                width:
+                    52px;
+
+                height:
+                    52px;
+
+                right:
+                    18px;
+
+                bottom:
+                    18px;
+            }
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-pro">
+                PRO
+            </span>
+
+            <span class="logo-computer">
+                COMPUTER
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu">
+
+            ☰
+
+        </button>
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html"
+                   class="active">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#customers">
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    Contact Us
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://wa.me/60173668893"
+                    target="_blank"
+                    class="nav-whatsapp">
+
+                    WhatsApp
+
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
+<section class="page-hero">
+
+    <div class="page-grid"></div>
+
+    <div class="container">
+
+        <div class="page-hero-content reveal">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                WHAT WE DO
+
+            </div>
+
+
+            <h1>
+
+                Technology
+                <span>Solutions.</span>
+
+            </h1>
+
+
+            <p>
+
+                From computers and technical support to
+                LED displays, smart classrooms, networking
+                and security systems — Pro Computer Center
+                provides practical technology solutions
+                for individuals, schools, businesses and
+                organisations.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="section services-intro">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <div class="reveal-left">
+
+                <div class="section-label">
+                    Our Services
+                </div>
+
+                <h2 class="intro-title">
+
+                    One place for
+                    <span>technology.</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="intro-text reveal-right">
+
+                <p>
+
+                    With more than three decades of
+                    experience, Pro Computer Center
+                    provides a wide range of technology
+                    products, installation services and
+                    technical support.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Whether you need a computer for your
+                    home, a complete classroom solution
+                    for a school, CCTV for your business,
+                    or a large LED display project, our
+                    team can help you find a practical
+                    solution.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     01 COMPUTER SALES
+================================================== -->
+
+<section
+    class="service-section"
+    id="computer-sales">
+
+    <div class="container">
+
+        <div class="service-detail">
+
+
+            <div class="service-image reveal-left">
+
+                <img
+                    src="images/computer-sales.jpg"
+                    alt="Computer sales">
+
+            </div>
+
+
+            <div class="service-content reveal-right">
+
+                <div class="service-number">
+                    01 / COMPUTER SALES
+                </div>
+
+                <h2>
+                    Computers for
+                    every need.
+                </h2>
+
+                <p>
+
+                    We provide computer solutions for
+                    home users, students, professionals,
+                    businesses and organisations.
+
+                    Our team can help you choose a
+                    suitable computer based on your
+                    requirements and budget.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        Desktop computers
+                    </div>
+
+                    <div class="feature">
+                        Business computers
+                    </div>
+
+                    <div class="feature">
+                        Custom PC solutions
+                    </div>
+
+                    <div class="feature">
+                        Computer upgrades
+                    </div>
+
+                    <div class="feature">
+                        Monitors and peripherals
+                    </div>
+
+                    <div class="feature">
+                        Office technology
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20computer%20sales."
+                    target="_blank"
+                    class="service-button">
+
+                    Enquire on WhatsApp →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     02 COMPUTER REPAIR
+================================================== -->
+
+<section
+    class="service-section"
+    id="computer-repair">
+
+    <div class="container">
+
+        <div class="service-detail reverse">
+
+
+            <div class="service-image reveal-right">
+
+                <img
+                    src="images/computer-repair.jpg"
+                    alt="Computer repair service">
+
+            </div>
+
+
+            <div class="service-content reveal-left">
+
+                <div class="service-number">
+                    02 / COMPUTER REPAIR
+                </div>
+
+                <h2>
+                    Keep your
+                    technology running.
+                </h2>
+
+                <p>
+
+                    When your computer is slow, damaged
+                    or not working properly, our technical
+                    support can help diagnose and solve
+                    the problem.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        Hardware diagnosis
+                    </div>
+
+                    <div class="feature">
+                        Component replacement
+                    </div>
+
+                    <div class="feature">
+                        Windows and software issues
+                    </div>
+
+                    <div class="feature">
+                        Computer upgrades
+                    </div>
+
+                    <div class="feature">
+                        System maintenance
+                    </div>
+
+                    <div class="feature">
+                        Technical troubleshooting
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20computer%20repair."
+                    target="_blank"
+                    class="service-button">
+
+                    Ask About Repair →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     03 LAPTOP & ACCESSORIES
+================================================== -->
+
+<section
+    class="service-section"
+    id="laptop-accessories">
+
+    <div class="container">
+
+        <div class="service-detail">
+
+
+            <div class="service-image reveal-left">
+
+                <img
+                    src="images/laptop-accessories.jpg"
+                    alt="Laptops and computer accessories">
+
+            </div>
+
+
+            <div class="service-content reveal-right">
+
+                <div class="service-number">
+                    03 / LAPTOP & ACCESSORIES
+                </div>
+
+                <h2>
+                    The right tools
+                    for your work.
+                </h2>
+
+                <p>
+
+                    From laptops for students and
+                    professionals to everyday computer
+                    accessories, we provide essential
+                    technology products for different
+                    needs.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        Laptops
+                    </div>
+
+                    <div class="feature">
+                        Keyboards and mice
+                    </div>
+
+                    <div class="feature">
+                        Monitors
+                    </div>
+
+                    <div class="feature">
+                        Storage devices
+                    </div>
+
+                    <div class="feature">
+                        Cables and adapters
+                    </div>
+
+                    <div class="feature">
+                        Computer peripherals
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20laptops%20and%20accessories."
+                    target="_blank"
+                    class="service-button">
+
+                    Ask About Products →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     04 LED DISPLAY
+================================================== -->
+
+<section
+    class="service-section"
+    id="led-display">
+
+    <div class="container">
+
+        <div class="service-detail reverse">
+
+
+            <div class="service-image reveal-right">
+
+                <img
+                    src="images/led-display.jpg"
+                    alt="LED display installation">
+
+            </div>
+
+
+            <div class="service-content reveal-left">
+
+                <div class="service-number">
+                    04 / LED DISPLAY
+                </div>
+
+                <h2>
+                    High-impact
+                    digital displays.
+                </h2>
+
+                <p>
+
+                    We provide LED display solutions for
+                    businesses, schools, events, public
+                    spaces and other applications.
+
+                    From product selection to installation
+                    and setup, we help create reliable
+                    display solutions.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        Indoor LED displays
+                    </div>
+
+                    <div class="feature">
+                        Outdoor LED displays
+                    </div>
+
+                    <div class="feature">
+                        Display system setup
+                    </div>
+
+                    <div class="feature">
+                        Installation
+                    </div>
+
+                    <div class="feature">
+                        Configuration
+                    </div>
+
+                    <div class="feature">
+                        Technical support
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20LED%20display%20solutions."
+                    target="_blank"
+                    class="service-button">
+
+                    Discuss LED Project →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     05 SMART CLASSROOM
+================================================== -->
+
+<section
+    class="service-section"
+    id="smart-classroom">
+
+    <div class="container">
+
+        <div class="service-detail">
+
+
+            <div class="service-image reveal-left">
+
+                <img
+                    src="images/smart-classroom.jpg"
+                    alt="Smart classroom interactive education technology">
+
+            </div>
+
+
+            <div class="service-content reveal-right">
+
+                <div class="service-number">
+                    05 / SMART CLASSROOM
+                </div>
+
+                <h2>
+                    Smarter classrooms.
+                    Better learning.
+                </h2>
+
+                <p>
+
+                    We provide interactive education
+                    technology for primary and secondary
+                    schools, helping classrooms adopt
+                    modern digital teaching tools.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        Interactive displays
+                    </div>
+
+                    <div class="feature">
+                        Smart classroom equipment
+                    </div>
+
+                    <div class="feature">
+                        Teaching technology
+                    </div>
+
+                    <div class="feature">
+                        Classroom installation
+                    </div>
+
+                    <div class="feature">
+                        System configuration
+                    </div>
+
+                    <div class="feature">
+                        Technical support
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20smart%20classroom%20solutions."
+                    target="_blank"
+                    class="service-button">
+
+                    Discuss School Project →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     06 NETWORKING
+================================================== -->
+
+<section
+    class="service-section"
+    id="networking">
+
+    <div class="container">
+
+        <div class="service-detail reverse">
+
+
+            <div class="service-image reveal-right">
+
+                <img
+                    src="images/networking.jpg"
+                    alt="Computer networking infrastructure">
+
+            </div>
+
+
+            <div class="service-content reveal-left">
+
+                <div class="service-number">
+                    06 / NETWORKING
+                </div>
+
+                <h2>
+                    Connected.
+                    Reliable. Ready.
+                </h2>
+
+                <p>
+
+                    A reliable network is the foundation
+                    of a connected workplace.
+
+                    We provide network infrastructure
+                    and connectivity solutions for
+                    businesses, schools, shops and
+                    organisations.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        Network installation
+                    </div>
+
+                    <div class="feature">
+                        Structured cabling
+                    </div>
+
+                    <div class="feature">
+                        Wi-Fi solutions
+                    </div>
+
+                    <div class="feature">
+                        Network equipment
+                    </div>
+
+                    <div class="feature">
+                        Office connectivity
+                    </div>
+
+                    <div class="feature">
+                        Network troubleshooting
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20networking."
+                    target="_blank"
+                    class="service-button">
+
+                    Discuss Network Project →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     07 CCTV
+================================================== -->
+
+<section
+    class="service-section"
+    id="cctv">
+
+    <div class="container">
+
+        <div class="service-detail">
+
+
+            <div class="service-image reveal-left">
+
+                <img
+                    src="images/cctv.jpg"
+                    alt="CCTV security camera system">
+
+            </div>
+
+
+            <div class="service-content reveal-right">
+
+                <div class="service-number">
+                    07 / CCTV
+                </div>
+
+                <h2>
+                    Security you
+                    can see.
+                </h2>
+
+                <p>
+
+                    CCTV systems provide visibility and
+                    peace of mind for homes, shops,
+                    offices, schools and organisations.
+
+                    We help customers choose and set up
+                    practical surveillance solutions.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        CCTV cameras
+                    </div>
+
+                    <div class="feature">
+                        Indoor surveillance
+                    </div>
+
+                    <div class="feature">
+                        Outdoor surveillance
+                    </div>
+
+                    <div class="feature">
+                        Recording systems
+                    </div>
+
+                    <div class="feature">
+                        Installation
+                    </div>
+
+                    <div class="feature">
+                        System configuration
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20CCTV."
+                    target="_blank"
+                    class="service-button">
+
+                    Discuss CCTV Project →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     08 ACCOUNTING SOFTWARE
+================================================== -->
+
+<section
+    class="service-section"
+    id="accounting">
+
+    <div class="container">
+
+        <div class="service-detail reverse">
+
+
+            <div class="service-image reveal-right">
+
+                <img
+                    src="images/accounting-software.jpg"
+                    alt="Accounting software support">
+
+            </div>
+
+
+            <div class="service-content reveal-left">
+
+                <div class="service-number">
+                    08 / ACCOUNTING SOFTWARE
+                </div>
+
+                <h2>
+                    Technology that
+                    supports your business.
+                </h2>
+
+                <p>
+
+                    We provide accounting software support
+                    and technical assistance for businesses
+                    and shops, helping users keep their
+                    day-to-day business systems running
+                    smoothly.
+
+                </p>
+
+
+                <div class="features">
+
+                    <div class="feature">
+                        Accounting software support
+                    </div>
+
+                    <div class="feature">
+                        Software installation
+                    </div>
+
+                    <div class="feature">
+                        System setup
+                    </div>
+
+                    <div class="feature">
+                        Troubleshooting
+                    </div>
+
+                    <div class="feature">
+                        Business computer support
+                    </div>
+
+                    <div class="feature">
+                        User assistance
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20enquire%20about%20accounting%20software%20support."
+                    target="_blank"
+                    class="service-button">
+
+                    Ask About Support →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-content reveal">
+
+            <div>
+
+                <h2>
+                    Have a project
+                    in mind?
+                </h2>
+
+                <p>
+
+                    Tell us what you need and our team
+                    can help you find a practical
+                    technology solution.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/60173668893?text=Hi%20Pro%20Computer%20Center%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project."
+                target="_blank"
+                class="cta-button">
+
+                Talk to Us on WhatsApp →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <span class="logo-pro">
+                    PRO
+                </span>
+
+                <span class="logo-computer">
+                    COMPUTER
+                </span>
+
+            </div>
+
+
+            <div class="footer-copy">
+
+                © 2026 Pro Computer Center.
+                All rights reserved.
+
+            </div>
+
+
+            <div class="footer-copy">
+
+                Established 1994 ·
+                Sekinchan, Selangor
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    href="https://wa.me/60173668893"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Contact Pro Computer Center on WhatsApp">
+
+    ☎
+
+</a>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* NAVBAR */
+
+    const navbar =
+        document.getElementById("navbar");
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (window.scrollY > 50) {
+
+                navbar.classList.add(
+                    "scrolled"
+                );
+
+            } else {
+
+                navbar.classList.remove(
+                    "scrolled"
+                );
+
+            }
+
+        }
+    );
+
+
+    /* MOBILE MENU */
+
+    const menuToggle =
+        document.getElementById(
+            "menuToggle"
+        );
+
+    const navLinks =
+        document.getElementById(
+            "navLinks"
+        );
+
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            navLinks.classList.toggle(
+                "active"
+            );
+
+        }
+    );
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    navLinks.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* SCROLL REVEAL */
+
+    const elements =
+        document.querySelectorAll(
+            ".reveal, .reveal-left, .reveal-right"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(
+                    entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target.classList.add(
+                                "active"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    elements.forEach(
+        element => {
+
+            observer.observe(
+                element
+            );
+
+        }
+    );
+
+</script>
+
+</body>
+</html>
