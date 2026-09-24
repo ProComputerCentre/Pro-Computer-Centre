@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
 
@@ -8,10 +8,10 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Services | Pro Computer Centre</title>
+<title>服务 | Pro Computer Centre</title>
 
 <meta name="description"
-content="Computer sales, repair, laptops, LED displays, smart classroom, networking, CCTV and accounting software support by Pro Computer Centre.">
+content="Pro Computer Centre 提供电脑销售、电脑维修、笔记本电脑及配件、LED显示屏、智慧教室、网络、CCTV及会计软件支援。">
 
 <style>
 
@@ -26,9 +26,17 @@ html {
 }
 
 body {
-    font-family:Arial,Helvetica,sans-serif;
+
+    font-family:
+        "Microsoft YaHei",
+        "Noto Sans SC",
+        Arial,
+        sans-serif;
+
     color:#172033;
-    line-height:1.7;
+
+    line-height:1.8;
+
     background:#fff;
 }
 
@@ -38,20 +46,26 @@ a {
 }
 
 :root {
+
     --blue:#0066cc;
     --dark-blue:#003b73;
     --light-blue:#00a9e0;
     --soft-blue:#eef7ff;
     --gray:#667085;
+
 }
 
 /* NAV */
 
 .navbar {
+
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
+
     z-index:1000;
 
     background:rgba(255,255,255,.96);
@@ -62,13 +76,17 @@ a {
 }
 
 .nav-container {
+
     max-width:1200px;
+
     margin:auto;
 
     padding:14px 25px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 }
 
@@ -77,21 +95,28 @@ a {
 }
 
 .nav-links {
+
     display:flex;
+
     align-items:center;
+
     gap:28px;
 }
 
 .nav-links a {
+
     font-size:14px;
+
     font-weight:600;
 }
 
 .nav-links a:hover {
+
     color:var(--blue);
 }
 
 .language-switch {
+
     padding:8px 14px;
 
     border:1px solid var(--blue);
@@ -106,12 +131,16 @@ a {
 }
 
 .language-switch:hover {
+
     background:var(--blue);
-    color:#fff!important;
+
+    color:white!important;
 }
 
 .whatsapp-nav {
+
     background:#25D366;
+
     color:white!important;
 
     padding:9px 15px;
@@ -120,8 +149,11 @@ a {
 }
 
 .menu-btn {
+
     display:none;
+
     font-size:28px;
+
     cursor:pointer;
 }
 
@@ -148,11 +180,11 @@ a {
 
     color:var(--blue);
 
+    font-size:13px;
+
     font-weight:800;
 
     letter-spacing:2px;
-
-    font-size:13px;
 
     margin-bottom:15px;
 }
@@ -164,7 +196,7 @@ a {
     font-size:
         clamp(42px,6vw,70px);
 
-    line-height:1.1;
+    line-height:1.2;
 
     margin-bottom:20px;
 }
@@ -185,13 +217,11 @@ a {
 .service {
 
     padding:100px 25px;
-
 }
 
 .service:nth-child(even) {
 
     background:#f7faff;
-
 }
 
 .service-container {
@@ -202,9 +232,7 @@ a {
 
     display:grid;
 
-    grid-template-columns:
-        1fr
-        1fr;
+    grid-template-columns:1fr 1fr;
 
     gap:70px;
 
@@ -310,7 +338,7 @@ a {
             var(--blue)
         );
 
-    color:#fff;
+    color:white;
 
     text-align:center;
 }
@@ -338,7 +366,7 @@ a {
 
     padding:13px 22px;
 
-    background:#fff;
+    background:white;
 
     color:var(--blue);
 
@@ -353,7 +381,7 @@ footer {
 
     background:#0c1726;
 
-    color:#fff;
+    color:white;
 
     text-align:center;
 
@@ -383,7 +411,7 @@ footer p {
 
         padding:20px;
 
-        background:#fff;
+        background:white;
 
         border-radius:10px;
 
@@ -451,7 +479,7 @@ footer p {
 
 <div class="nav-container">
 
-<a href="index.html"
+<a href="index-cn.html"
 class="logo">
 
 <img src="logo.png"
@@ -471,29 +499,29 @@ onclick="toggleMenu()">
 <div class="nav-links"
 id="navLinks">
 
-<a href="index.html">
-Home
+<a href="index-cn.html">
+首页
 </a>
 
-<a href="index.html#about">
-About
+<a href="index-cn.html#about">
+关于我们
 </a>
 
-<a href="services.html">
-Services
+<a href="services-cn.html">
+服务
 </a>
 
-<a href="index.html#customers">
-Customers
+<a href="index-cn.html#customers">
+客户
 </a>
 
-<a href="index.html#contact">
-Contact
+<a href="index-cn.html#contact">
+联系我们
 </a>
 
-<a href="services-cn.html"
+<a href="services.html"
 class="language-switch">
-中文
+EN
 </a>
 
 <a href="https://wa.me/60173668893"
@@ -514,22 +542,22 @@ WhatsApp
 <header class="page-header">
 
 <div class="label">
-OUR SERVICES
+我们的服务
 </div>
 
 <h1>
-Technology Solutions
+科技解决方案
 </h1>
 
 <p>
-Practical technology products and services
-for individuals, schools, businesses and organisations.
+为个人、学校、企业及机构提供实用的
+科技产品与解决方案。
 </p>
 
 </header>
 
 
-<!-- COMPUTER SALES -->
+<!-- 01 -->
 
 <section class="service"
 id="computer-sales">
@@ -539,36 +567,36 @@ id="computer-sales">
 <div class="service-image">
 
 <img src="computer-sales.jpg"
-alt="Computer Sales">
+alt="电脑销售">
 
 </div>
 
 <div>
 
 <div class="service-number">
-01 · COMPUTER SALES
+01 · 电脑销售
 </div>
 
 <h2>
-Computer Sales
+电脑销售
 </h2>
 
 <p>
-We provide computers and technology equipment
-for personal, business and education needs.
+提供个人、企业及教育用途的电脑
+与科技设备。
 </p>
 
 <ul class="service-list">
 
-<li>Desktop computers</li>
+<li>台式电脑</li>
 
-<li>Business computers</li>
+<li>企业电脑</li>
 
-<li>Education computers</li>
+<li>教育用途电脑</li>
 
-<li>Computer equipment</li>
+<li>电脑设备</li>
 
-<li>Technology recommendations</li>
+<li>科技产品建议</li>
 
 </ul>
 
@@ -579,7 +607,7 @@ for personal, business and education needs.
 </section>
 
 
-<!-- REPAIR -->
+<!-- 02 -->
 
 <section class="service"
 id="computer-repair">
@@ -589,36 +617,35 @@ id="computer-repair">
 <div class="service-image">
 
 <img src="computer-repair.jpg"
-alt="Computer Repair">
+alt="电脑维修">
 
 </div>
 
 <div>
 
 <div class="service-number">
-02 · COMPUTER REPAIR
+02 · 电脑维修
 </div>
 
 <h2>
-Computer Repair
+电脑维修
 </h2>
 
 <p>
-Troubleshooting and maintenance services
-for computers and related equipment.
+提供电脑故障检测、维修及维护服务。
 </p>
 
 <ul class="service-list">
 
-<li>Computer troubleshooting</li>
+<li>电脑故障检测</li>
 
-<li>Hardware diagnosis</li>
+<li>硬件诊断</li>
 
-<li>System maintenance</li>
+<li>系统维护</li>
 
-<li>Hardware replacement</li>
+<li>硬件更换</li>
 
-<li>Technical support</li>
+<li>技术支援</li>
 
 </ul>
 
@@ -629,7 +656,7 @@ for computers and related equipment.
 </section>
 
 
-<!-- LAPTOP -->
+<!-- 03 -->
 
 <section class="service"
 id="laptop-accessories">
@@ -639,36 +666,36 @@ id="laptop-accessories">
 <div class="service-image">
 
 <img src="laptop-accessories.jpg"
-alt="Laptop and Accessories">
+alt="笔记本电脑及配件">
 
 </div>
 
 <div>
 
 <div class="service-number">
-03 · LAPTOP & ACCESSORIES
+03 · 笔记本电脑及配件
 </div>
 
 <h2>
-Laptop & Accessories
+笔记本电脑及配件
 </h2>
 
 <p>
-Essential laptops, peripherals and accessories
-for work, education and everyday use.
+提供工作、教育及日常使用所需的
+笔记本电脑与电脑周边。
 </p>
 
 <ul class="service-list">
 
-<li>Laptops</li>
+<li>笔记本电脑</li>
 
-<li>Keyboards and mice</li>
+<li>键盘及鼠标</li>
 
-<li>Computer accessories</li>
+<li>电脑配件</li>
 
-<li>Storage devices</li>
+<li>储存设备</li>
 
-<li>Peripherals</li>
+<li>电脑周边设备</li>
 
 </ul>
 
@@ -679,7 +706,7 @@ for work, education and everyday use.
 </section>
 
 
-<!-- LED -->
+<!-- 04 -->
 
 <section class="service"
 id="led-display">
@@ -689,36 +716,36 @@ id="led-display">
 <div class="service-image">
 
 <img src="led-display.jpg"
-alt="LED Display">
+alt="LED显示屏">
 
 </div>
 
 <div>
 
 <div class="service-number">
-04 · LED DISPLAY
+04 · LED 显示屏
 </div>
 
 <h2>
-LED Display
+LED 显示屏
 </h2>
 
 <p>
-LED display solutions for businesses,
-schools, events and organisations.
+为企业、学校、活动及机构提供
+LED 显示屏解决方案。
 </p>
 
 <ul class="service-list">
 
-<li>LED display systems</li>
+<li>LED 显示屏系统</li>
 
-<li>Indoor displays</li>
+<li>室内 LED 显示屏</li>
 
-<li>Outdoor displays</li>
+<li>户外 LED 显示屏</li>
 
-<li>Display installation</li>
+<li>显示屏安装</li>
 
-<li>Technical support</li>
+<li>技术支援</li>
 
 </ul>
 
@@ -729,7 +756,7 @@ schools, events and organisations.
 </section>
 
 
-<!-- SMART CLASSROOM -->
+<!-- 05 -->
 
 <section class="service"
 id="smart-classroom">
@@ -739,36 +766,35 @@ id="smart-classroom">
 <div class="service-image">
 
 <img src="smart-classroom.jpg"
-alt="Smart Classroom">
+alt="智慧教室">
 
 </div>
 
 <div>
 
 <div class="service-number">
-05 · SMART CLASSROOM
+05 · 智慧教室
 </div>
 
 <h2>
-Smart Classroom
+智慧教室
 </h2>
 
 <p>
-Interactive education technology designed
-for modern teaching environments.
+为现代教学环境提供互动教育科技设备。
 </p>
 
 <ul class="service-list">
 
-<li>Interactive displays</li>
+<li>互动显示屏</li>
 
-<li>Smart classroom equipment</li>
+<li>智慧教室设备</li>
 
-<li>Education technology</li>
+<li>教育科技设备</li>
 
-<li>Classroom installation</li>
+<li>教室安装</li>
 
-<li>Technical support</li>
+<li>技术支援</li>
 
 </ul>
 
@@ -779,7 +805,7 @@ for modern teaching environments.
 </section>
 
 
-<!-- NETWORKING -->
+<!-- 06 -->
 
 <section class="service"
 id="networking">
@@ -789,36 +815,36 @@ id="networking">
 <div class="service-image">
 
 <img src="networking.jpg"
-alt="Networking">
+alt="网络系统">
 
 </div>
 
 <div>
 
 <div class="service-number">
-06 · NETWORKING
+06 · 网络系统
 </div>
 
 <h2>
-Networking
+网络系统
 </h2>
 
 <p>
-Network connectivity solutions for homes,
-schools and businesses.
+为家庭、学校及企业提供网络连接
+及网络系统解决方案。
 </p>
 
 <ul class="service-list">
 
-<li>Network setup</li>
+<li>网络安装</li>
 
-<li>Wi-Fi solutions</li>
+<li>Wi-Fi 解决方案</li>
 
-<li>Network equipment</li>
+<li>网络设备</li>
 
-<li>Business networking</li>
+<li>企业网络</li>
 
-<li>Network troubleshooting</li>
+<li>网络故障排查</li>
 
 </ul>
 
@@ -829,7 +855,7 @@ schools and businesses.
 </section>
 
 
-<!-- CCTV -->
+<!-- 07 -->
 
 <section class="service"
 id="cctv">
@@ -850,25 +876,25 @@ alt="CCTV">
 </div>
 
 <h2>
-CCTV Security
+CCTV 监控系统
 </h2>
 
 <p>
-Security camera solutions for monitoring
-homes, shops and businesses.
+为住宅、商店及企业提供安全监控
+摄像系统。
 </p>
 
 <ul class="service-list">
 
-<li>CCTV systems</li>
+<li>CCTV 系统</li>
 
-<li>Security cameras</li>
+<li>监控摄像机</li>
 
-<li>Camera installation</li>
+<li>摄像头安装</li>
 
-<li>Monitoring systems</li>
+<li>监控系统</li>
 
-<li>Technical support</li>
+<li>技术支援</li>
 
 </ul>
 
@@ -879,7 +905,7 @@ homes, shops and businesses.
 </section>
 
 
-<!-- ACCOUNTING -->
+<!-- 08 -->
 
 <section class="service"
 id="accounting">
@@ -889,36 +915,36 @@ id="accounting">
 <div class="service-image">
 
 <img src="accounting-software.jpg"
-alt="Accounting Software">
+alt="会计软件">
 
 </div>
 
 <div>
 
 <div class="service-number">
-08 · ACCOUNTING SOFTWARE
+08 · 会计软件
 </div>
 
 <h2>
-Accounting Software Support
+会计软件支援
 </h2>
 
 <p>
-Accounting software support for businesses
-and organisations.
+为企业及机构提供会计软件相关
+技术支援。
 </p>
 
 <ul class="service-list">
 
-<li>Accounting software setup</li>
+<li>会计软件安装</li>
 
-<li>Software support</li>
+<li>软件支援</li>
 
-<li>Business system support</li>
+<li>企业系统支援</li>
 
-<li>Troubleshooting</li>
+<li>故障排查</li>
 
-<li>Technical assistance</li>
+<li>技术协助</li>
 
 </ul>
 
@@ -934,18 +960,17 @@ and organisations.
 <section class="cta">
 
 <h2>
-Looking for a Technology Solution?
+需要科技解决方案？
 </h2>
 
 <p>
-Contact Pro Computer Centre to discuss
-your requirements.
+欢迎联系我们，告诉我们您的需求。
 </p>
 
 <a href="https://wa.me/60173668893"
 target="_blank">
 
-Contact Us on WhatsApp
+通过 WhatsApp 联系我们
 
 </a>
 
@@ -955,11 +980,11 @@ Contact Us on WhatsApp
 <footer>
 
 <p>
-© 2026 Pro Computer Centre. All Rights Reserved.
+© 2026 Pro Computer Centre. 版权所有。
 </p>
 
 <p style="margin-top:6px;">
-Established 1994 · Sekinchan, Selangor
+成立于 1994 年 · 雪兰莪适耕庄
 </p>
 
 </footer>
